@@ -276,3 +276,40 @@
     transform: rotate(0deg);
   }
 }
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navbar :hover {
+  background-color: pink;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+  max-width: 500px;
+}
+
+.bodyimage {
+  position: relative;
+  width: 100%;
+}
+
+.logolink {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.logolink :hover {
+  background-color: pink;
+}
