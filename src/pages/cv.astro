@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TimeLineElement from '../components/cv/TimeLine.astro';
+const xkiteDesc = `
+● Utilized React to provide an interactive and responsive GUI, including configuring and interfacing with an xkite instance, monitoring and managing Docker instances, making KSQL queries and streams, and creating test topics and messages on a Kafka cluster.
+● Used React Hooks to manage state and modularize components with a reusable container pattern. 
+● Integrated Redux Toolkit to integrate state management throughout the component matrix, handling influxes of multiple asynchronous user requests and preventing mutations in the codebase.
+● Used TypeScript for xkite-core and xkite codebases to ensure strict type checking prior to deployment, reducing errors, and preventing incorrect interfaces.
+● Utilized Apache Kafka microservices to interface with the JMX exporters, KSQL, KafkaJS and Spring in order to create a fully interactive xkite environment.
+● Containerized custom Spring Boot application and deployed as a microservice Kafka client for retrieving key metrics from a Kafka cluster.
+● Integrated Grafana to develop a custom dashboard that interfaced with Prometheus via JMX exporters, efficiently scraping key metrics from Kafka Brokers.
+● Implemented Web Worker API threads to query xkite endpoints providing a responsive user experience and modularizing the codebase / optimizing the throughput.
+● Wrote a core API library to enable users to generate their own custom Kafka Docker ecosystems via CLI or Web GUI and deploy to a cloud environment. 
+● Used NextJS 13 on both the frontend and backend to implement xkite GUI accelerating development and providing built in fast server side rendering. 
+● Utilized Material UI on the frontend to deliver a cohesive, unified modular UX. `;
+
+const l3hDesc = `
+● Employed PetaLinux on an Ubuntu VM to create custom boot images to interface with reference clock hardware and bundle new firmware loads in order to correct for clock drift and support software development.
+● Created VxWorks RTPs using C++ to process input waveform files and output controls to firmware in order to generate synchronous IF, RS422 and Ethernet outputs to an EW system under test.
+● Utilized Git/BitBucket for version control of AESA RADAR simulator software using a GitFlow workflow.
+● Used DOORS to create and manage repositories of software requirements for EW systems.
+Created a Python script to generate custom PDW binary output files for playback in a software test environment to validate FW/SW requirements without the need for HW. 
+● Wrote Assembly code for custom device drivers on Bare Metal CCAs in order to implement a customer requested ECM feature.
+● Wrote C++ code for new interface screen and DB schema of custom DBMS tool for new customer request ECM feature.
+● Using Jira, managed/led teams of 7-10 cross-functional engineers using Agile/Scrum methodology to meet critical software release milestones.
+`;
+const aaskiDesc = `
+● Wrote Java code for CHIMERA software project, front end HAIPE device management using SNMP.
+● Conducted Penetration test plans/executions for Vulnerability Assessment team within CSIA Cryptography Modernization group at CERDEC S&TCD.
+`;
+const cumminsDes = `
+● Wrote C code for real time independent monitoring software on custom PPC and x86 I2C architectures to detect and mitigate any single point failures in safety critical vehicle operation.
+● Wrote C code to Bosch EGAS, MISRA and ANSI standards to ensure compliance to ISO 26.26.2 road vehicle functional safety specification.
+● Debugged with Lauterbach debugging toolkit on I2C boards to verify low level operations and diagnose root cause of bugs. 
+● Designed in MATLAB Simulink/RTW, for prototyping and testing of software.
+`;
+---
+
+<BaseLayout title='Resume'>
+  <div class='mb-5'>
+    <div class='text-3xl w-full font-bold'>Profile</div>
+  </div>
+
+  <div class='mb-10 text-justify'>
+    I am an engineer with a breadth of professional experience in software
+    development for embedded and full stack applications as well as in system
+    design, test and deployment. I have been exposed to engineering in some form
+    or fashion since I was a kid. Almost all my family are all either electrical
+    or software engineers and my career experience goes as far back as 2005 when
+    I started my internship for the Department of Defense working in sattelite
+    communications.
+  </div>
+
+  <div class='mb-5'>
+    <div class='text-3xl w-full font-bold'>Education</div>
+  </div>
+
+  <div class='time-line-container grid gap-4 mb-10'>
+    <TimeLineElement
+      title='MS in Systems Engineering'
+      subtitle='2017 to 2021 at Stevens Institute of Technology, Hoboken, NJ'
+    />
+    <TimeLineElement
+      title='MS in Controls Engineering'
+      subtitle='2009 to 2010 at Boston University, Boston, MA'
+    />
+    <TimeLineElement
+      title='BS in Mechanical Engineering'
+      subtitle='2005 to 2009 at Rowan University, Glassboro, NJ'
+    />
+  </div>
+
+  <div class='mb-5'>
+    <div class='text-3xl w-full font-bold'>Experience</div>
+  </div>
+
+  <div class='time-line-container mb-10'>
+    <TimeLineElement
+      className='line-break'
+      title='Software Engineer @ xkite (OSLabs)'
+      subtitle='From 2023 to Present'
+      desc={xkiteDesc}
+    />
+    <TimeLineElement
+      className='line-break'
+      title='Lead Systems Engineer @ L3Harris Technologies'
+      subtitle='From 2016 to 2023 Clifton, NJ'
+      desc={l3hDesc}
+    />
+    <TimeLineElement
+      className='line-break'
+      title='Electrical Engineer @ AASKI Technology'
+      subtitle='From 2015 to 2016 Aberdeen, MD'
+      desc={aaskiDesc}
+    />
+    <TimeLineElement
+      className='line-break'
+      title='Senior Software Engineer @ Cummins Inc.'
+      subtitle='From 2011 to 2015 Columbus, IN'
+      desc={cumminsDes}
+    />
+  </div>
+
+  <!-- <div class='mb-5'>
+    <div class='text-3xl w-full font-bold'>Certifications</div>
+  </div>
+
+  <ul class='list-disc mx-6 mb-10 grid gap-2'>
+    <li>
+      <a href='https://www.efset.org/cert/DxtNKG' target='_blank'>
+        EF SET English Certificate 74/100 (C2 Proficient)</a
+      >
+    </li>
+    <li>
+      <a
+        href='https://certiprof.com/pages/scrum-foundation-professional-certificate-sfpc-en-sp'
+        target='_blank'
+      >
+        Scrum Foundation Professional Certificate (SFPC)</a
+      >
+    </li>
+  </ul> -->
+
+  <div class='mb-5'>
+    <div class='text-3xl w-full font-bold'>Skills</div>
+  </div>
+
+  <ul class='list-disc md:columns-5 columns-2 mx-6'>
+    <li>TypeScript</li>
+    <li>JavaScript</li>
+    <li>C</li>
+    <li>C++</li>
+    <li>Python</li>
+    <li>Bash</li>
+    <li>Go</li>
+    <li>WebAssembly</li>
+    <li>Java</li>
+    <li>Postgres SQL</li>
+    <li>MySQL</li>
+    <li>MongoDB</li>
+    <li>KSQL</li>
+    <li>REST APIs</li>
+    <li>Xilinx</li>
+    <li>Webpack</li>
+    <li>YAML</li>
+    <li>Docker</li>
+    <li>Apache Kafka</li>
+    <li>MATLAB</li>
+    <li>CSS</li>
+    <li>SASS</li>
+    <li>HTML</li>
+    <li>Node.js</li>
+    <li>React.js</li>
+    <li>Redux.js</li>
+    <li>Astro</li>
+    <li>Bootstrap</li>
+    <li>Taildwind</li>
+    <li>JQuery</li>
+    <li>Git</li>
+    <li>GitHub</li>
+    <li>Jira</li>
+    <li>Confluence</li>
+    <li>Scrum</li>
+    <li>UI Design</li>
+    <li>WEB Design</li>
+    <li>Logo Design</li>
+  </ul>
+</BaseLayout>

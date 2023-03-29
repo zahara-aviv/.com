@@ -1,0 +1,9 @@
+.time-line-container > div:last-child .education__time > .education__line {
+  display: none;
+}
+
+.line-break {
+  display: block;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
