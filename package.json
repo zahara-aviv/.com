@@ -2,7 +2,7 @@
   "name": "com",
   "description": "Personal website template with Project Section, CV Section, Paginated Blog, Shop, RSS Feed, SEO Friendly, Visual themes and Responsive Desing.",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "dev": "astro dev",

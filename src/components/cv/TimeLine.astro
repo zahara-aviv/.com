@@ -1,6 +1,8 @@
 ---
 const { title, subtitle, desc, className } = Astro.props;
-const pclass = className + ' my-2 text-justify';
+const pclass =
+  className +
+  ' my-2 text-justify py-4 leading-7 text-gray-500 hover:text-black';
 ---
 
 <div class='flex'>
@@ -13,8 +15,6 @@ const pclass = className + ' my-2 text-justify';
   <div class='experience__data bd-grid px-5'>
     <h3 class='font-semibold mb-1'>{title}</h3>
     <span class='font-light text-sm' style='white-space: pre;'>{subtitle}</span>
-    <p class={pclass}>
-      {desc}
-    </p>
+    <p class={pclass}>{desc}</p>
   </div>
 </div>

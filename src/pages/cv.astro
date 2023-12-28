@@ -1,8 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TimeLineElement from '../components/cv/TimeLine.astro';
-const xkiteDesc = `
-● Utilized React to provide an interactive and responsive GUI, including configuring and interfacing with an xkite instance, monitoring and managing Docker instances, making KSQL queries and streams, and creating test topics and messages on a Kafka cluster.
+const cohereDesc = `● Used Python to Poetry scripts for processing data ingest to and from the Collect annotation toolset for LLM finetuning and training.
+● Created frontend applications utilizing React within the NextJS framework.
+● Used Prisma with Postgres as a typesafe means of managing database models for querying and updating the backend on Collect with NextJS server actions.
+● Integrated state management into Collect applications using XState state machine framework in order to provide consistent application actions between different project schemas.
+● Utilized TipTap library as a markdown editor for SFT annotations tasks on Collect in order to provide an extensible / customizable editor experience.
+● Integrated ChartJS with D3 libraries to create a responsove histogram of time series. 
+● Implemented table pagination using Prisma queries within an XState machine logic.
+● Created staging environment in order to validate production changes prior to deployment using GCP with Terraform configurations.
+`;
+
+const xkiteDesc = `● Utilized React to provide an interactive and responsive GUI, including configuring and interfacing with an xkite instance, monitoring and managing Docker instances, making KSQL queries and streams, and creating test topics and messages on a Kafka cluster.
 ● Used React Hooks to manage state and modularize components with a reusable container pattern. 
 ● Integrated Redux Toolkit to integrate state management throughout the component matrix, handling influxes of multiple asynchronous user requests and preventing mutations in the codebase.
 ● Used TypeScript for xkite-core and xkite codebases to ensure strict type checking prior to deployment, reducing errors, and preventing incorrect interfaces.
@@ -14,8 +23,7 @@ const xkiteDesc = `
 ● Used NextJS 13 on both the frontend and backend to implement xkite GUI accelerating development and providing built in fast server side rendering. 
 ● Utilized Material UI on the frontend to deliver a cohesive, unified modular UX. `;
 
-const l3hDesc = `
-● Employed PetaLinux on an Ubuntu VM to create custom boot images to interface with reference clock hardware and bundle new firmware loads in order to correct for clock drift and support software development.
+const l3hDesc = `● Employed PetaLinux on an Ubuntu VM to create custom boot images to interface with reference clock hardware and bundle new firmware loads in order to correct for clock drift and support software development.
 ● Created VxWorks RTPs using C++ to process input waveform files and output controls to firmware in order to generate synchronous IF, RS422 and Ethernet outputs to an EW system under test.
 ● Utilized Git/BitBucket for version control of AESA RADAR simulator software using a GitFlow workflow.
 ● Used DOORS to create and manage repositories of software requirements for EW systems.
@@ -24,16 +32,57 @@ const l3hDesc = `
 ● Wrote C++ code for new interface screen and DB schema of custom DBMS tool for new customer request ECM feature.
 ● Using Jira, managed/led teams of 7-10 cross-functional engineers using Agile/Scrum methodology to meet critical software release milestones.
 `;
-const aaskiDesc = `
-● Wrote Java code for CHIMERA software project, front end HAIPE device management using SNMP.
+const aaskiDesc = `● Wrote Java code for CHIMERA software project, front end HAIPE device management using SNMP.
 ● Conducted Penetration test plans/executions for Vulnerability Assessment team within CSIA Cryptography Modernization group at CERDEC S&TCD.
 `;
-const cumminsDes = `
-● Wrote C code for real time independent monitoring software on custom PPC and x86 I2C architectures to detect and mitigate any single point failures in safety critical vehicle operation.
+const cumminsDes = `● Wrote C code for real time independent monitoring software on custom PPC and x86 I2C architectures to detect and mitigate any single point failures in safety critical vehicle operation.
 ● Wrote C code to Bosch EGAS, MISRA and ANSI standards to ensure compliance to ISO 26.26.2 road vehicle functional safety specification.
 ● Debugged with Lauterbach debugging toolkit on I2C boards to verify low level operations and diagnose root cause of bugs. 
 ● Designed in MATLAB Simulink/RTW, for prototyping and testing of software.
 `;
+
+const skills = [
+  'TypeScript',
+  'JavaScript',
+  'C',
+  'C++',
+  'Python',
+  'Bash',
+  'Go',
+  'Java',
+  'Prisma',
+  'Postgres SQL',
+  'MySQL',
+  'MongoDB',
+  'KSQL',
+  'REST APIs',
+  'Xilinx',
+  'Webpack',
+  'YAML',
+  'Docker',
+  'Apache Kafka',
+  'MATLAB',
+  'TailwindCSS',
+  'CSS',
+  'SASS',
+  'HTML',
+  'Node.js',
+  'React.js',
+  'Redux',
+  'XState',
+  'Next.js',
+  'Astro',
+  'JQuery',
+  'Git',
+  'GitHub',
+  'Jira',
+  'Linear',
+  'Confluence',
+  'Scrum',
+  'UI Design',
+  'WEB Design',
+  'Logo Design',
+];
 ---
 
 <BaseLayout title='Resume'>
@@ -42,13 +91,11 @@ const cumminsDes = `
   </div>
 
   <div class='mb-10 text-justify'>
-    I am an engineer with a breadth of professional experience in software
+    I'm an engineer with a breadth of professional experience in software
     development for embedded and full stack applications as well as in system
-    design, test and deployment. I have been exposed to engineering in some form
-    or fashion since I was a kid. Almost all my family are all either electrical
-    or software engineers and my career experience goes as far back as 2005 when
-    I started my internship for the Department of Defense working in sattelite
-    communications.
+    design, test and deployment. I have been engineering in some form or fashion
+    since 2005 when I started my internship for the DoD working in sattelite
+    communications. Currently working as a full stack software dev @ Cohere.
   </div>
 
   <div class='mb-5'>
@@ -77,6 +124,12 @@ const cumminsDes = `
   <div class='time-line-container mb-10'>
     <TimeLineElement
       className='line-break'
+      title='Member of Techincal @ Cohere'
+      subtitle='From 2023/08 to Present'
+      desc={cohereDesc}
+    />
+    <TimeLineElement
+      className='line-break'
       title='Software Engineer @ xkite (OSLabs)'
       subtitle='From 2023 to Present'
       desc={xkiteDesc}
@@ -101,68 +154,13 @@ const cumminsDes = `
     />
   </div>
 
-  <!-- <div class='mb-5'>
-    <div class='text-3xl w-full font-bold'>Certifications</div>
-  </div>
-
-  <ul class='list-disc mx-6 mb-10 grid gap-2'>
-    <li>
-      <a href='https://www.efset.org/cert/DxtNKG' target='_blank'>
-        EF SET English Certificate 74/100 (C2 Proficient)</a
-      >
-    </li>
-    <li>
-      <a
-        href='https://certiprof.com/pages/scrum-foundation-professional-certificate-sfpc-en-sp'
-        target='_blank'
-      >
-        Scrum Foundation Professional Certificate (SFPC)</a
-      >
-    </li>
-  </ul> -->
-
   <div class='mb-5'>
     <div class='text-3xl w-full font-bold'>Skills</div>
   </div>
 
-  <ul class='list-disc md:columns-5 columns-2 mx-6'>
-    <li>TypeScript</li>
-    <li>JavaScript</li>
-    <li>C</li>
-    <li>C++</li>
-    <li>Python</li>
-    <li>Bash</li>
-    <li>Go</li>
-    <li>WebAssembly</li>
-    <li>Java</li>
-    <li>Postgres SQL</li>
-    <li>MySQL</li>
-    <li>MongoDB</li>
-    <li>KSQL</li>
-    <li>REST APIs</li>
-    <li>Xilinx</li>
-    <li>Webpack</li>
-    <li>YAML</li>
-    <li>Docker</li>
-    <li>Apache Kafka</li>
-    <li>MATLAB</li>
-    <li>CSS</li>
-    <li>SASS</li>
-    <li>HTML</li>
-    <li>Node.js</li>
-    <li>React.js</li>
-    <li>Redux.js</li>
-    <li>Astro</li>
-    <li>Bootstrap</li>
-    <li>Taildwind</li>
-    <li>JQuery</li>
-    <li>Git</li>
-    <li>GitHub</li>
-    <li>Jira</li>
-    <li>Confluence</li>
-    <li>Scrum</li>
-    <li>UI Design</li>
-    <li>WEB Design</li>
-    <li>Logo Design</li>
+  <ul
+    class='list-disc md:columns-5 columns-2 mx-6 text-gray-500 hover:text-black'
+  >
+    {skills.map((skill) => <li>{skill}</li>)}
   </ul>
 </BaseLayout>
