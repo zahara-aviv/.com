@@ -1,8 +1,8 @@
-<div class='drawer-side bg-base-200'>
+<div
+  class='drawer-side bg-base-200 dark:bg-black text-base-content dark:text-white'
+>
   <label for='my-drawer' class='drawer-overlay bg-base-200'></label>
-  <div
-    class='menu flex flex-col flex-nowrap p-4 overflow-y-auto w-[21rem] bg-base-200 text-base-content'
-  >
+  <div class='menu flex flex-col flex-nowrap p-4 overflow-y-auto w-[21rem]'>
     <div class='w-fit'>
       <a href='/'>
         <div
@@ -22,8 +22,6 @@
       <!-- Sidebar content here -->
       <li><a id='home' href='/'>Home</a></li>
       <li><a id='projects' href='/projects'>Projects</a></li>
-      <!-- <li><a id="services" href="/services">Services</a></li> -->
-      <!-- <li><a id="store" href="/store">Store</a></li> -->
       <li><a id='blog' href='/blog/'>Blog</a></li>
       <li><a id='cv' href='/cv'>CV</a></li>
       <li><a href='mailto:me@zahara-aviv.com'>Contact</a></li>
@@ -143,15 +141,18 @@
     const pages = [projectsLink, blogLink, cvLink];
 
     const activeClass = 'bg-base-300'; // For primary color replace with `active` class
+    const activeDarkClass = 'dark:bg-gray-500'; // For primary color replace with `active` class
 
     pages.forEach((elem) => {
       if (elem !== null && url.includes(elem.id)) {
         isHome = false;
         elem.classList.add(activeClass);
+        elem.classList.add(activeDarkClass);
       }
     });
     if (isHome && homeLink !== null) {
       homeLink.classList.add(activeClass);
+      homeLink.classList.add(activeDarkClass);
     }
   </script>
 </div>
